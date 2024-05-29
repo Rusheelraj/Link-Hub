@@ -5,7 +5,7 @@ import requests
 app = Flask(__name__)
 
 # Add your VirusTotal API key here
-VT_API_KEY = 'd3454fbc3d37fe80e71b54d573f3a72a2e700de615dc69f82fd2f611fd576986'
+VT_API_KEY = 'Your API key here'
 
 def get_virustotal_report(url):
     params = {
