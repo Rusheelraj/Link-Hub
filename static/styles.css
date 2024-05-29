@@ -1,0 +1,135 @@
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0D0D0D;
+    color: #00FF00;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Changed from center */
+    min-height: 100vh; /* Use min-height instead of height */
+    margin: 0;
+    padding-top: 20px; /* Add some top padding */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.form-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 2px solid #00FF00;
+    background-color: #0D0D0D;
+    color: #00FF00;
+}
+
+button {
+    padding: 8px 12px;
+    border: 2px solid #00FF00;
+    background-color: #0D0D0D;
+    color: #00FF00;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #00FF00;
+    color: #0D0D0D;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Changed from center */
+    margin-bottom: 10px;
+    border-bottom: 1px solid #00FF00;
+    padding: 5px;
+}
+
+li a {
+    color: #00FF00;
+    text-decoration: none;
+    word-break: break-all; /* Added word-break */
+    margin-right: 10px;
+    flex-grow: 1; /* Added flex-grow */
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+.trash-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-self: flex-start; /* Added align-self */
+}
+
+.trash-btn img {
+    width: 16px;
+    height: 16px;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.delete-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    background-color: #000;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #00FF00;
+    padding: 5px;
+}
+
+.link-url {
+    flex: 1;
+    word-break: break-all;
+    margin-right: 10px;
+}
+
+.virustotal-score {
+    font-size: 14px;
+    color: #ffff00;
+    white-space: nowrap;
+    margin-right: 10px;
+}
