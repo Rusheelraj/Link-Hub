@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link-Hub - Share your links here!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Link - Hub</h1>
+        <form action="{{ url_for('add_link') }}" method="POST" class="form-vertical">
+            <input type="text" name="url" placeholder="Enter a URL" required>
+            <button type="submit" class="btn btn-primary">Add Link</button>
+        </form>
+        <div class="link-list">
+            {% for link in links %}
+                <div class="link-item">
+                    <a href="{{ link[1] }}" target="_blank" class="link-url">{{ link[1] }}</a>
+                    <span class="virustotal-score">Score: {{ link[2] }}/{{ link[3] }}</span>
+                    <form action="{{ url_for('delete_link', id=link[0]) }}" method="POST" class="delete-form">
+                        <button type="submit" class="btn btn-danger">
+                            <img src="{{ url_for('static', filename='trash-can.png') }}" alt="Delete" class="delete-icon">
+                        </button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
